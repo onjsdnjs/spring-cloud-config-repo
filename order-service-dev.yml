@@ -5,6 +5,8 @@ eureka:
     lease-renewal-interval-in-seconds: 1 # remove immediately service list
     lease-expiration-duration-in-seconds: 2 # remove immediately service list
     prefer-ip-address: true
+    metadataMap:
+      zone: zone1
   client:
     registry-fetch-interval-seconds: 3
     service-url:

@@ -1,8 +1,8 @@
 spring:
-  main:
-    allow-bean-definition-overriding: true
   application:
     name: order-service
+  main:
+    allow-bean-definition-overriding: true
   mail:
     host: smtp.gmail.com
     password: leaven011806230508!!
