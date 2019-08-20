@@ -1,0 +1,43 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    password: ENC(MdBblvaXjq7YL23XmHLJgw==)
+    url: jdbc:postgresql://localhost:5432/springboot
+    username: ENC(r118F0y9cT9+atnsT9SWnV79eL3vxnAS)
+  devtools:
+    livereload:
+      enabled: true
+  freemarker:
+    cache: false
+  rabbitmq:
+    host: 127.0.0.1
+    listener:
+      prefetch: 10
+      retry:
+        enabled: true
+        max-attempts: 3
+    password: guest
+    port: 5672
+    username: guest
+    virtual-host: /springboot
+  thymeleaf:
+    cache: false
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        min-idle: 8
+        max-idle: 500
+        max-active: 2000
+        max-wait: 10000
+    timeout: 0
+
+  cache:
+    type: redis
+
+  application:
+    name: admin-service
