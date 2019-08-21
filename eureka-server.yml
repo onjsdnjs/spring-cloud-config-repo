@@ -9,7 +9,7 @@ spring:
       overrideSystemProperties: false
   profiles: default
   application:
-    name: eureka-server
+    name: eureka-server-first.com
   boot:
     admin:
       context-path: /admin
