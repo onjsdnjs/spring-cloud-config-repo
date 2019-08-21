@@ -2,7 +2,7 @@ server:
   port: 8765
 
 zuul:
-  prefix: /api
+#  prefix: /api
   routes:
     admin-service:
       path: /adm/**
