@@ -6,36 +6,50 @@ spring:
       overrideNone: false
       overrideSystemProperties: false
 
+tpd:
+  peer1Port: 8761
+  peer2Port: 8762
+
 ---
 spring:
-  profiles:
-    active: peer1
+  profiles: peer1
 eureka:
   server:
     eviction-interval-timer-in-ms: 3000 # remove immediately service list
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false           # Just for demo
   instance:
+    hostname: localhost
+    metadataMap:
+      zone: zone1
+    # Either this one or the spring boot name must be the same
+    # (it works without setting it too, using the alias UNKNOWN)
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://localhost:8762/eureka
+      defaultZone: http://${hostname}:${tpd.peer2Port}/eureka
     register-with-eureka: true
     fetch-registry: true
+server:
+  port: ${tpd.peer1Port}
 
 ---
 spring:
-  profiles:
-    active: peer2
+  profiles: peer2
 eureka:
   server:
     eviction-interval-timer-in-ms: 3000 # remove immediately service list
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false
   instance:
+    hostname: localhost
+    metadataMap:
+      zone: zone2
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://${hostname}:${tpd.peer1Port}/eureka
     register-with-eureka: true
     fetch-registry: true
+server:
+  port: ${tpd.peer2Port}
