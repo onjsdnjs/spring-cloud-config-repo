@@ -27,8 +27,8 @@ eureka:
     hostname: eureka-server-first.com
     appname: eureka-cluster
   client:
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     service-url:
       defaultZone: http://eureka-server-second.com:8762/eureka/,http://eureka-server-third.com:8763/eureka/,http://eureka-server-fourth.com:8764/eureka/
 logging:
