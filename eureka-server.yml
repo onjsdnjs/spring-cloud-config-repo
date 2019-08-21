@@ -26,7 +26,7 @@ eureka:
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://${hostname}:${server.peer2Port}/eureka
+      defaultZone: http://localhost:${server.peer2Port}/eureka
     register-with-eureka: true
     fetch-registry: true
 server:
@@ -48,7 +48,7 @@ eureka:
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://${hostname}:${server.peer1Port}/eureka
+      defaultZone: http://localhost:${server.peer1Port}/eureka
     register-with-eureka: true
     fetch-registry: true
 server:
