@@ -1,5 +1,3 @@
-server:
-  port: 8001
 management:
   endpoints:
     web:
@@ -12,6 +10,13 @@ management:
       show-details: ALWAYS
     shutdown:
       enabled: true
+feign:
+  hystrix:
+    enabled: true
+
+---
+server:
+  port: 8001
 spring:
   cloud:
     config:
@@ -32,25 +37,10 @@ eureka:
     prefer-ip-address: true
     metadataMap:
       zone: first-zone
-feign:
-  hystrix:
-    enabled: true
 
 ---
 server:
   port: 8002
-management:
-  endpoints:
-    web:
-      base-path: /
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      enabled: true
-      show-details: ALWAYS
-    shutdown:
-      enabled: true
 spring:
   cloud:
     config:
@@ -71,25 +61,10 @@ eureka:
     prefer-ip-address: true
     metadataMap:
       zone: second-zone
-feign:
-  hystrix:
-    enabled: true
 
 ---
 server:
   port: 8003
-management:
-  endpoints:
-    web:
-      base-path: /
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      enabled: true
-      show-details: ALWAYS
-    shutdown:
-      enabled: true
 spring:
   cloud:
     config:
@@ -109,25 +84,10 @@ eureka:
     prefer-ip-address: true
     metadataMap:
       zone: third-zone
-feign:
-  hystrix:
-    enabled: true
 
 ---
 server:
   port: 8004
-management:
-  endpoints:
-    web:
-      base-path: /
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      enabled: true
-      show-details: ALWAYS
-    shutdown:
-      enabled: true
 spring:
   cloud:
     config:
@@ -152,6 +112,3 @@ eureka:
     prefer-ip-address: true
     metadataMap:
       zone: fourth-zone
-feign:
-  hystrix:
-    enabled: true
