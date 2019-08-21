@@ -31,7 +31,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
 server:
-  port: ${tpd.peer1Port}
+  port: ${server.peer1Port}
 
 ---
 spring:
@@ -52,4 +52,4 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
 server:
-  port: ${tpd.peer2Port}
+  port: ${server.peer2Port}
