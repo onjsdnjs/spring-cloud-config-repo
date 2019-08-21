@@ -47,3 +47,5 @@ eureka:
     fetch-registry: true
 server:
   port: 8762
+
+---
