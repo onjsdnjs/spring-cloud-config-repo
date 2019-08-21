@@ -8,8 +8,6 @@ spring:
       overrideNone: false
       overrideSystemProperties: false
   profiles: default
-  application:
-    name: eureka-server-first.com
   boot:
     admin:
       context-path: /admin
@@ -24,13 +22,13 @@ eureka:
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false           # Just for demo
   instance:
-    hostname: eureka-server-first.com
+    hostname: 127.0.0.1
     appname: eureka-cluster
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-server-second.com:8762/eureka/,http://eureka-server-third.com:8763/eureka/,http://eureka-server-fourth.com:8764/eureka/
+      defaultZone: http://localhost:8762/eureka/,http://127.0.0.1:8763/eureka/,http://127.0.0.1:8764/eureka/
 logging:
   level:
     com:
@@ -51,13 +49,13 @@ eureka:
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false           # Just for demo
   instance:
-    hostname: eureka-server-second.com
+    hostname: 127.0.0.1
     appname: eureka-cluster
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-server-first.com:8761/eureka/,http://eureka-server-third.com:8763/eureka/,http://eureka-server-fourth.com:8764/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8763/eureka/,http://127.0.0.1:8764/eureka/
 logging:
   level:
     com:
@@ -83,13 +81,13 @@ eureka:
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false           # Just for demo
   instance:
-    hostname: eureka-server-third.com
+    hostname: 127.0.0.1
     appname: eureka-cluster
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-server-first.com:8761/eureka/,http://eureka-server-second.com:8762/eureka/,http://eureka-server-fourth.com:8764/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8764/eureka/
 logging:
   level:
     com:
@@ -120,13 +118,13 @@ eureka:
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false           # Just for demo
   instance:
-    hostname: eureka-server-fourth.com
+    hostname: 127.0.0.1
     appname: eureka-cluster
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-server-third.com:8763/eureka/,http://eureka-server-second.com:8762/eureka/,http://eureka-server-first.com:8761/eureka/
+      defaultZone: http://127.0.0.1:8763/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8761/eureka/
 logging:
   level:
     com:
