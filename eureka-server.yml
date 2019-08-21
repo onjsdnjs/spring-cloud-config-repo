@@ -1,21 +1,3 @@
-server:
-  port: 8761  # Default : 8761
-
-eureka:
-  server:
-    eviction-interval-timer-in-ms: 3000 # remove immediately service list
-    response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
-    enableSelfPreservation: false           # Just for demo
-  client:
-    register-with-eureka: false             # Only for local stand-alone development
-    fetch-registry: false                   # Only for local stand-alone development
-    service-url:
-      defaultZone: http://localhost:8761/eureka  # Default Value. Just for demo
-  instance:
-    hostname: localhost
-    metadataMap:
-      zone: zone1
-    prefer-ip-address: true                 # Use ip address instead of hostname from OS when reporting myself to eureka server
 spring:
   cloud:
     config:
@@ -23,3 +5,51 @@ spring:
       failFast: true
       overrideNone: false
       overrideSystemProperties: false
+
+server:
+  peer1Port: 8761
+  peer2Port: 8762
+
+---
+spring:
+  profiles: peer1
+eureka:
+  server:
+    eviction-interval-timer-in-ms: 3000 # remove immediately service list
+    response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
+    enableSelfPreservation: false           # Just for demo
+  instance:
+    hostname: localhost
+    metadataMap:
+      zone: zone1
+    # Either this one or the spring boot name must be the same
+    # (it works without setting it too, using the alias UNKNOWN)
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://${hostname}:${tpd.peer2Port}/eureka
+    register-with-eureka: true
+    fetch-registry: true
+server:
+  port: ${tpd.peer1Port}
+
+---
+spring:
+  profiles: peer2
+eureka:
+  server:
+    eviction-interval-timer-in-ms: 3000 # remove immediately service list
+    response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
+    enableSelfPreservation: false
+  instance:
+    hostname: localhost
+    metadataMap:
+      zone: zone2
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://${hostname}:${tpd.peer1Port}/eureka
+    register-with-eureka: true
+    fetch-registry: true
+server:
+  port: ${tpd.peer2Port}

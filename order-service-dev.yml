@@ -18,8 +18,12 @@ feign:
 management:
   endpoints:
     web:
+      base-path: /
       exposure:
         include: "*"
   endpoint:
     health:
+      enabled: true
       show-details: ALWAYS
+    shutdown:
+      enabled: true
