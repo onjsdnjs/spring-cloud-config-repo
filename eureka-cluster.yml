@@ -35,6 +35,12 @@ management:
     web:
       exposure:
         include: "*"
+  endpoint:
+    health:
+      enabled: true
+      show-details: ALWAYS
+    shutdown:
+      enabled: true
 
 ---
 server:
@@ -68,6 +74,12 @@ management:
     web:
       exposure:
         include: "*"
+  endpoint:
+    health:
+      enabled: true
+      show-details: ALWAYS
+    shutdown:
+      enabled: true
 ---
 server:
   port: 8763
@@ -100,6 +112,12 @@ management:
     web:
       exposure:
         include: "*"
+  endpoint:
+    health:
+      enabled: true
+      show-details: ALWAYS
+    shutdown:
+      enabled: true
 ---
 server:
   port: 8764
@@ -132,3 +150,9 @@ management:
     web:
       exposure:
         include: "*"
+  endpoint:
+    health:
+      enabled: true
+      show-details: ALWAYS
+    shutdown:
+      enabled: true
