@@ -16,7 +16,9 @@ spring:
           protocol: smtps
     protocol: smtps
     username: onjsdnjs@gmail.com
-    cloud:
-      config:
-        override-system-properties: false
-        override-none: true
+  cloud:
+    config:
+      allowOverride: true
+      failFast: true
+      overrideNone: false
+      overrideSystemProperties: false
