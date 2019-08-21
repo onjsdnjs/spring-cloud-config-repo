@@ -16,18 +16,20 @@ spring:
           protocol: smtps
     protocol: smtps
     username: onjsdnjs@gmail.com
+  cloud:
+    config:
+      allowOverride: true
+      failFast: true
+      overrideNone: false
+      overrideSystemProperties: false
 management:
   endpoints:
     web:
-      base-path: /
       exposure:
         include: "*"
   endpoint:
     health:
-      enabled: true
       show-details: ALWAYS
-    shutdown:
-      enabled: true
 feign:
   hystrix:
     enabled: true
@@ -36,12 +38,6 @@ feign:
 server:
   port: 8001
 spring:
-  cloud:
-    config:
-      allowOverride: true
-      failFast: true
-      overrideNone: false
-      overrideSystemProperties: false
   profiles: first
 eureka:
   client:
@@ -58,12 +54,6 @@ eureka:
 server:
   port: 8002
 spring:
-  cloud:
-    config:
-      allowOverride: true
-      failFast: true
-      overrideNone: false
-      overrideSystemProperties: false
   profiles: second
 eureka:
   client:
@@ -80,12 +70,6 @@ eureka:
 server:
   port: 8003
 spring:
-  cloud:
-    config:
-      allowOverride: true
-      failFast: true
-      overrideNone: false
-      overrideSystemProperties: false
   profiles: third
 eureka:
   client:
@@ -101,17 +85,7 @@ eureka:
 server:
   port: 8004
 spring:
-  cloud:
-    config:
-      allowOverride: true
-      failFast: true
-      overrideNone: false
-      overrideSystemProperties: false
   profiles: fourth
-  boot:
-    admin:
-      client:
-        url: http://127.0.0.1:9091/admin
 eureka:
   client:
     registry-fetch-interval-seconds: 3
