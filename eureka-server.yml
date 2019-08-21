@@ -22,12 +22,10 @@ eureka:
     hostname: localhost
     metadataMap:
       zone: zone1
-    # Either this one or the spring boot name must be the same
-    # (it works without setting it too, using the alias UNKNOWN)
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://${hostname}:${server.peer2Port}/eureka
+      defaultZone: http://localhost:8761/eureka
     register-with-eureka: true
     fetch-registry: true
 server:
@@ -48,7 +46,7 @@ eureka:
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://${hostname}:${server.peer1Port}/eureka
+      defaultZone: http://localhost:8762/eureka
     register-with-eureka: true
     fetch-registry: true
 server:
