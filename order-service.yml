@@ -1,3 +1,38 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+    mail:
+      host: smtp.gmail.com
+      password: leaven011806230508!!
+      port: 465
+      properties:
+        mail:
+          smtps:
+            auth: true
+            starttls:
+              enable: true
+            timeout: 8000
+          transport:
+            protocol: smtps
+      protocol: smtps
+      username: onjsdnjs@gmail.com
+management:
+  endpoints:
+    web:
+      base-path: /
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      enabled: true
+      show-details: ALWAYS
+    shutdown:
+      enabled: true
+feign:
+  hystrix:
+    enabled: true
+
+---
 server:
   port: 8001
 spring:
