@@ -17,7 +17,7 @@ eureka:
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false           # Just for demo
   instance:
-    hostname: 127.0.0.1
+    hostname: eureka-server-first.com
     appname: eureka-cluster
   client:
     register-with-eureka: true
@@ -56,7 +56,7 @@ eureka:
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false           # Just for demo
   instance:
-    hostname: 127.0.0.1
+    hostname: eureka-server-second.com
     appname: eureka-cluster
   client:
     register-with-eureka: true
@@ -94,7 +94,7 @@ eureka:
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false           # Just for demo
   instance:
-    hostname: 127.0.0.1
+    hostname: eureka-server-third.com
     appname: eureka-cluster
   client:
     register-with-eureka: true
@@ -132,7 +132,7 @@ eureka:
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false           # Just for demo
   instance:
-    hostname: 127.0.0.1
+    hostname: eureka-server-fourth.com
     appname: eureka-cluster
   client:
     register-with-eureka: true
