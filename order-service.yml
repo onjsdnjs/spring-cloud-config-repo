@@ -24,7 +24,7 @@ eureka:
   client:
     registry-fetch-interval-seconds: 3
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka/
+      defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/,http://127.0.0.1:8764/eureka/
 #    prefer-same-zone-eureka: true
   instance:
     lease-expiration-duration-in-seconds: 8
@@ -62,7 +62,7 @@ eureka:
   client:
     registry-fetch-interval-seconds: 3
     service-url:
-      defaultZone: http://127.0.0.1:8762/eureka/
+      defaultZone: http://127.0.0.1:8762/eureka/,http://127.0.0.1:8761/eureka/,http://127.0.0.1:8763/eureka/,http://127.0.0.1:8764/eureka/
 #    prefer-same-zone-eureka: true
   instance:
     lease-expiration-duration-in-seconds: 8
@@ -100,8 +100,7 @@ eureka:
   client:
     registry-fetch-interval-seconds: 3
     service-url:
-      defaultZone: http://127.0.0.1:8763/eureka/
-#    prefer-same-zone-eureka: true
+      defaultZone: http://127.0.0.1:8763/eureka/,http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8764/eureka/
   instance:
     lease-expiration-duration-in-seconds: 8
     lease-renewal-interval-in-seconds: 2
@@ -142,7 +141,7 @@ eureka:
   client:
     registry-fetch-interval-seconds: 3
     service-url:
-      defaultZone: http://127.0.0.1:8764/eureka/
+      defaultZone: http://127.0.0.1:8764/eureka/,http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/
 #    prefer-same-zone-eureka: true
   instance:
     lease-expiration-duration-in-seconds: 8
