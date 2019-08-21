@@ -19,6 +19,8 @@ eureka:
   instance:
     hostname: eureka-server-first.com
     appname: eureka-cluster
+    metadataMap:
+      zone: first-zone
   client:
     register-with-eureka: true
     fetch-registry: true
@@ -58,6 +60,8 @@ eureka:
   instance:
     hostname: eureka-server-second.com
     appname: eureka-cluster
+    metadataMap:
+      zone: second-zone
   client:
     register-with-eureka: true
     fetch-registry: true
@@ -96,6 +100,8 @@ eureka:
   instance:
     hostname: eureka-server-third.com
     appname: eureka-cluster
+    metadataMap:
+      zone: third-zone
   client:
     register-with-eureka: true
     fetch-registry: true
@@ -134,6 +140,8 @@ eureka:
   instance:
     hostname: eureka-server-fourth.com
     appname: eureka-cluster
+    metadataMap:
+      zone: fourth-zone
   client:
     register-with-eureka: true
     fetch-registry: true
