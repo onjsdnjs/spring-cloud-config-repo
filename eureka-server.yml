@@ -1,3 +1,5 @@
+server:
+  port: 7000
 spring:
   cloud:
     config:
@@ -5,51 +7,129 @@ spring:
       failFast: true
       overrideNone: false
       overrideSystemProperties: false
-
-tpd:
-  peer1Port: 8761
-  peer2Port: 8762
-
----
-spring:
-  profiles: peer1
+  profiles: default
+  application:
+    name: eureka-server
+  boot:
+    admin:
+      context-path: /admin
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 eureka:
   server:
     eviction-interval-timer-in-ms: 3000 # remove immediately service list
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false           # Just for demo
   instance:
-    hostname: eureka-peer1
-    metadataMap:
-      zone: zone1
-    # Either this one or the spring boot name must be the same
-    # (it works without setting it too, using the alias UNKNOWN)
-    prefer-ip-address: true
+    hostname: eureka-server-first.com
+    appname: eureka-cluster
   client:
-    serviceUrl:
-      defaultZone: http://${hostname}:${tpd.peer2Port}/eureka
-    register-with-eureka: true
-    fetch-registry: true
-server:
-  port: ${tpd.peer1Port}
-
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${spring.application.name}:${server.port}/eureka/
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF      
 ---
+server:
+  port: 7001
 spring:
-  profiles: peer2
+  profiles: second
+  boot:
+    admin:
+      context-path: /admin
 eureka:
   server:
     eviction-interval-timer-in-ms: 3000 # remove immediately service list
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
-    enableSelfPreservation: false
+    enableSelfPreservation: false           # Just for demo
   instance:
-    hostname: eureka-peer2
-    metadataMap:
-      zone: zone2
-    prefer-ip-address: true
+    hostname: eureka-server-second.com
+    appname: eureka-cluster
   client:
-    serviceUrl:
-      defaultZone: http://${hostname}:${tpd.peer1Port}/eureka
     register-with-eureka: true
     fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server-third.com:7002/eureka/,http://eureka-server-fourth.com:7003/eureka/
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"  
+---
 server:
-  port: ${tpd.peer2Port}
+  port: 7002
+spring:
+  profiles: third
+  boot:
+    admin:
+      context-path: /admin
+eureka:
+  server:
+    eviction-interval-timer-in-ms: 3000 # remove immediately service list
+    response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
+    enableSelfPreservation: false           # Just for demo
+  instance:
+    hostname: eureka-server-third.com
+    appname: eureka-cluster
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server-second.com:7001/eureka/,http://eureka-server-fourth.com:7003/eureka/
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+---
+server:
+  port: 7003
+spring:
+  profiles: fourth
+  boot:
+    admin:
+      context-path: /admin
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+eureka:
+  server:
+    eviction-interval-timer-in-ms: 3000 # remove immediately service list
+    response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
+    enableSelfPreservation: false           # Just for demo
+  instance:
+    hostname: eureka-server-fourth.com
+    appname: eureka-cluster
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://eureka-server-third.com:7002/eureka/,http://eureka-server-second.com:7001/eureka/
+logging:
+  level:
+    com:
+      netflix:
+        eureka: OFF
+        discovery: OFF 
