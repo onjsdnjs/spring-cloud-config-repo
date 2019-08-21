@@ -25,12 +25,12 @@ eureka:
     registry-fetch-interval-seconds: 3
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka/
-    prefer-same-zone-eureka: true
+#    prefer-same-zone-eureka: true
   instance:
     lease-expiration-duration-in-seconds: 8
     lease-renewal-interval-in-seconds: 2
-    metadataMap:
-      zone: first-zone
+#    metadataMap:
+#      zone: first-zone
 feign:
   hystrix:
     enabled: true
@@ -63,12 +63,12 @@ eureka:
     registry-fetch-interval-seconds: 3
     service-url:
       defaultZone: http://127.0.0.1:8762/eureka/
-    prefer-same-zone-eureka: true
+#    prefer-same-zone-eureka: true
   instance:
     lease-expiration-duration-in-seconds: 8
     lease-renewal-interval-in-seconds: 2
-    metadataMap:
-      zone: second-zone
+#    metadataMap:
+#      zone: second-zone
 feign:
   hystrix:
     enabled: true
@@ -101,12 +101,12 @@ eureka:
     registry-fetch-interval-seconds: 3
     service-url:
       defaultZone: http://127.0.0.1:8763/eureka/
-    prefer-same-zone-eureka: true
+#    prefer-same-zone-eureka: true
   instance:
     lease-expiration-duration-in-seconds: 8
     lease-renewal-interval-in-seconds: 2
-    metadataMap:
-      zone: third-zone
+#    metadataMap:
+#      zone: third-zone
 feign:
   hystrix:
     enabled: true
@@ -143,12 +143,12 @@ eureka:
     registry-fetch-interval-seconds: 3
     service-url:
       defaultZone: http://127.0.0.1:8764/eureka/
-    prefer-same-zone-eureka: true  
+#    prefer-same-zone-eureka: true
   instance:
     lease-expiration-duration-in-seconds: 8
     lease-renewal-interval-in-seconds: 2
-    metadataMap:
-      zone: fourth-zone
+#    metadataMap:
+#      zone: fourth-zone
 feign:
   hystrix:
     enabled: true
