@@ -26,6 +26,7 @@ management:
 ---
 server:
   port: 8761
+spring:
   profiles: first
 eureka:
   server:
@@ -46,6 +47,7 @@ eureka:
 ---
 server:
   port: 8762
+spring:
   profiles: second
 eureka:
   server:
@@ -66,6 +68,7 @@ eureka:
 ---
 server:
   port: 8763
+spring:
   profiles: third
 eureka:
   server:
@@ -86,6 +89,7 @@ eureka:
 ---
 server:
   port: 8764
+spring:
   profiles: fourth
 eureka:
   server:
