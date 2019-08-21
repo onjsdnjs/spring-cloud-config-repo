@@ -30,7 +30,7 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://${hostname}:${server.port}/eureka/
+      defaultZone: http://eureka-server-second.com:8762/eureka/,http://eureka-server-third.com:8763/eureka/,http://eureka-server-fourth.com:8764/eureka/
 logging:
   level:
     com:
@@ -57,7 +57,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-server-third.com:8763/eureka/,http://eureka-server-fourth.com:8764/eureka/
+      defaultZone: http://eureka-server-first.com:8761/eureka/,http://eureka-server-third.com:8763/eureka/,http://eureka-server-fourth.com:8764/eureka/
 logging:
   level:
     com:
@@ -89,7 +89,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-server-second.com:8762/eureka/,http://eureka-server-fourth.com:8764/eureka/
+      defaultZone: http://eureka-server-first.com:8761/eureka/,http://eureka-server-second.com:8762/eureka/,http://eureka-server-fourth.com:8764/eureka/
 logging:
   level:
     com:
@@ -126,7 +126,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://eureka-server-third.com:8763/eureka/,http://eureka-server-second.com:8762/eureka/
+      defaultZone: http://eureka-server-third.com:8763/eureka/,http://eureka-server-second.com:8762/eureka/,http://eureka-server-first.com:8761/eureka/
 logging:
   level:
     com:
