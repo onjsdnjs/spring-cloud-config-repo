@@ -20,17 +20,14 @@ eureka:
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false           # Just for demo
   instance:
-    hostname: localhost
-    metadataMap:
-      zone: zone1
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://localhost:${server.peer2Port}/eureka
+      defaultZone: http://localhost:8762/eureka
     register-with-eureka: true
     fetch-registry: true
 server:
-  port: ${server.peer1Port}
+  port: 8761
 
 ---
 spring:
@@ -42,14 +39,11 @@ eureka:
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false
   instance:
-    hostname: localhost
-    metadataMap:
-      zone: zone2
     prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://localhost:${server.peer1Port}/eureka
+      defaultZone: http://localhost:8761/eureka
     register-with-eureka: true
     fetch-registry: true
 server:
-  port: ${server.peer2Port}
+  port: 8762
