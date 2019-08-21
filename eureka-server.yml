@@ -16,3 +16,10 @@ eureka:
     metadataMap:
       zone: zone1
     prefer-ip-address: true                 # Use ip address instead of hostname from OS when reporting myself to eureka server
+spring:
+  cloud:
+    config:
+      allowOverride: true
+      failFast: true
+      overrideNone: false
+      overrideSystemProperties: false

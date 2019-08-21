@@ -59,6 +59,12 @@ server:
 
 ################### JPA Configuration ##########################
 spring:
+  cloud:
+    config:
+      allowOverride: true
+      failFast: true
+      overrideNone: false
+      overrideSystemProperties: false
   data:
     jpa:
       repositories:
