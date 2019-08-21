@@ -38,6 +38,3 @@ spring:
 
   cache:
     type: redis
-
-  application:
-    name: admin-service

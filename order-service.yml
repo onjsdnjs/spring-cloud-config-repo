@@ -1,6 +1,4 @@
 spring:
-  application:
-    name: order-service
   main:
     allow-bean-definition-overriding: true
   mail:

@@ -6,5 +6,3 @@ spring:
     password: ENC(MdBblvaXjq7YL23XmHLJgw==)
     url: jdbc:postgresql://localhost:5432/springboot
     username: ENC(r118F0y9cT9+atnsT9SWnV79eL3vxnAS)
-  application:
-    name: product-service

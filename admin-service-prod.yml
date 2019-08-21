@@ -14,5 +14,3 @@ spring:
     port: 5672
     username: guest
     virtual-host: /springboot
-  application:
-    name: admin-service

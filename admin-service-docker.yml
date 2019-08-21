@@ -25,5 +25,3 @@ spring:
         max-active: 2000
         max-wait: 10000
     timeout: 0
-  application:
-    name: admin-service
