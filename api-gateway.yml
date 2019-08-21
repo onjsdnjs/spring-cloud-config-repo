@@ -1,0 +1,134 @@
+server:
+  port: 8765
+
+zuul:
+  prefix: /api
+  routes:
+    admin-service:
+      path: /adm/**
+      serviceId: admin-service
+    order-service:
+      path: /orders/**
+      serviceId: order-service
+    product-service:
+      path: /products/**
+      serviceId: product-service
+    event-service:
+      path: /events/**
+      serviceId: event-service
+    listener-service:
+      path: /listeners/**
+      serviceId: listener-service
+  ribbon-isolation-strategy: thread
+  thread-pool:
+    use-separate-thread-pools: true
+    thread-pool-key-prefix: zuul-
+  strip-prefix: false
+
+eureka:
+  instance:
+    non-secure-port: ${server.port}
+    prefer-ip-address: true
+  client:
+#    register-with-eureka: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 300000
+    admin-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 300000
+    order-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 300000
+    product-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 300000
+    event-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 300000
+    listener-service:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 300000
+  threadpool:
+    zuul-admin-service:
+      coreSize: 30
+      maximumSize: 100
+      allowMaximumSizeToDivergeFromCoreSize: true
+    zuul-order-service:
+      coreSize: 30
+      maximumSize: 100
+      allowMaximumSizeToDivergeFromCoreSize: true
+    zuul-product-service:
+      coreSize: 30
+      maximumSize: 100
+      allowMaximumSizeToDivergeFromCoreSize: true
+    zuul-event-service:
+      coreSize: 30
+      maximumSize: 100
+      allowMaximumSizeToDivergeFromCoreSize: true
+    zuul-listener-service:
+      coreSize: 30
+      maximumSize: 100
+      allowMaximumSizeToDivergeFromCoreSize: true
+
+admin-service:
+  ribbon:
+    MaxAutoRetriesNextServer: 1
+    ReadTimeout: 300000
+    ConnectTimeout: 30000
+    MaxTotalConnections: 300
+    MaxConnectionsPerHost: 100
+
+order-service:
+  ribbon:
+    MaxAutoRetriesNextServer: 1 # 다음 서버로 재시도
+    ReadTimeout: 300000
+    ConnectTimeout: 30000
+    MaxTotalConnections: 300
+    MaxConnectionsPerHost: 100
+
+product-service:
+  ribbon:
+    MaxAutoRetriesNextServer: 1
+    ReadTimeout: 300000
+    ConnectTimeout: 30000
+    MaxTotalConnections: 300
+    MaxConnectionsPerHost: 100
+
+event-service:
+  ribbon:
+    MaxAutoRetriesNextServer: 1
+    ReadTimeout: 300000
+    ConnectTimeout: 30000
+    MaxTotalConnections: 300
+    MaxConnectionsPerHost: 100
+
+listener-service:
+  ribbon:
+    MaxAutoRetriesNextServer: 1
+    ReadTimeout: 300000
+    ConnectTimeout: 30000
+    MaxTotalConnections: 300
+    MaxConnectionsPerHost: 100
+
+management:
+  endpoint:
+    health:
+      show-details: ALWAYS
