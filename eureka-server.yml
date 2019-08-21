@@ -19,7 +19,7 @@ eureka:
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false           # Just for demo
   instance:
-    hostname: localhost
+    hostname: eureka-peer1
     metadataMap:
       zone: zone1
     # Either this one or the spring boot name must be the same
@@ -42,7 +42,7 @@ eureka:
     response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
     enableSelfPreservation: false
   instance:
-    hostname: localhost
+    hostname: eureka-peer2
     metadataMap:
       zone: zone2
     prefer-ip-address: true
