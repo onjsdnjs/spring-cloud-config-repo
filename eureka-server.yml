@@ -46,4 +46,4 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
 server:
-  port: 8761
+  port: 8762
