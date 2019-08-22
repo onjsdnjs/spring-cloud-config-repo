@@ -11,6 +11,11 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
 
+################### Encryption Configuration ##########################
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+
 ---
 server:
   port: 8761
