@@ -14,6 +14,8 @@ custom:
     kakao:
       client-id: f7747834a929dd0adccbdeb58a108251
 spring:
+  zipkin:
+    baseUrl: http://zipkin-server/
   devtools:
     livereload:
       enabled: true

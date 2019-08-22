@@ -13,6 +13,10 @@ jasypt:
 
 ############# Spring Boot Configuration ############################
 spring:
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1.0
   main:
     allow-bean-definition-overriding: true
   rabbitmq:
@@ -167,3 +171,8 @@ google:
     key:
       secret: 6LfaHiITAAAAANpDTA_Zflwib95IhDqg2SNRLt4U
       site: 6LfaHiITAAAAAAgZBHl4ZUZAYk5RlOYTr6m2N34X
+
+################### zipkin server ###################
+sample:
+  zipkin:
+    enabled: true

@@ -2,6 +2,8 @@ server:
   port: 8083
 
 spring:
+  zipkin:
+    baseUrl: http://zipkin-server/
   datasource:
     password: ENC(MdBblvaXjq7YL23XmHLJgw==)
     url: jdbc:postgresql://localhost:5432/springboot

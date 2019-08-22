@@ -1,6 +1,8 @@
 server:
   port: 8001
 spring:
+  zipkin:
+    baseUrl: http://zipkin-server/
   profiles: first
   datasource:
     password: ENC(MdBblvaXjq7YL23XmHLJgw==)
