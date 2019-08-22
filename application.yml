@@ -74,7 +74,7 @@ spring:
           lob:
             non_contextual_creation: true
 
-  ################### ETC Configuration ##########################
+################### ETC Configuration ##########################
   servlet:
     multipart:
       file-size-threshold: 10MB
@@ -93,7 +93,7 @@ spring:
       overrideNone: false
       overrideSystemProperties: false
 
-  ################### JavaMail Configuration ##########################
+################### JavaMail Configuration ##########################
 #  mail:
 #    host: smtp.gmail.com
 #    password: leaven011806230508!!
