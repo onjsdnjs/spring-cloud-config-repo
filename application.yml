@@ -96,6 +96,23 @@ spring:
       overrideNone: false
       overrideSystemProperties: false
 
+  ################### JavaMail Configuration ##########################
+  mail:
+    host: smtp.gmail.com
+    password: leaven011806230508!!
+    port: 465
+    properties:
+      mail:
+        smtps:
+          auth: true
+          starttls:
+            enable: true
+          timeout: 8000
+        transport:
+          protocol: smtps
+    protocol: smtps
+    username: onjsdnjs@gmail.com
+
 ################### Mybatis Configuration ##########################
 #mybatis.type-aliases-package=io.sbmcs.domain.dto.security,io.sbmcs.domain.dto.event,io.sbmcs.domain.dto.board
 mybatis:
