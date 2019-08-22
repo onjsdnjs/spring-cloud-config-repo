@@ -1,10 +1,10 @@
+server:
+  tomcat:
+    max-swallow-size: -1
 ############# Spring Boot Configuration ############################
 spring:
   main:
     allow-bean-definition-overriding: true
-server:
-  tomcat:
-    max-swallow-size: -1
   datasource:
     password: ENC(MdBblvaXjq7YL23XmHLJgw==)
     url: jdbc:postgresql://localhost:5432/springboot
