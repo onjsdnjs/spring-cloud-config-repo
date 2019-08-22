@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ef9c97d-3531-47e7-a3c6-dca7de8b6412" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/admin-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,35 +17,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/eureka-cluster.yml">
+        <entry file="file://$PROJECT_DIR$/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="36" column="37" lean-forward="true" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+            <state relative-caret-position="2698">
+              <caret line="142" column="33" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/admin-service-dev.yml">
+        <entry file="file://$PROJECT_DIR$/admin-service-docker.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-285" />
+            <state relative-caret-position="494">
+              <caret line="26" column="14" selection-start-line="26" selection-start-column="14" selection-end-line="26" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin-service.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="302">
+              <caret line="110" column="74" lean-forward="true" selection-start-line="110" selection-start-column="74" selection-end-line="110" selection-end-column="74" />
+            </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/admin-service.yml">
+        <entry file="file://$PROJECT_DIR$/eureka-cluster.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="124" column="19" lean-forward="true" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
+            <state relative-caret-position="209">
+              <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/order-service.yml">
+        <entry file="file://$PROJECT_DIR$/admin-service-prod.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="45" column="138" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="138" />
+            <state relative-caret-position="304">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
             </state>
           </provider>
         </entry>
@@ -62,6 +73,7 @@
       <find>spring.application.name</find>
       <find>http://localhost</find>
       <find>first</find>
+      <find>server</find>
     </findStrings>
     <replaceStrings>
       <replace>http://127.0.0.1</replace>
@@ -74,21 +86,22 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/product-service-dev.yml" />
-        <option value="$PROJECT_DIR$/admin-service-dev.yml" />
         <option value="$PROJECT_DIR$/admin-service-docker.yml" />
         <option value="$PROJECT_DIR$/admin-service-prod.yml" />
         <option value="$PROJECT_DIR$/event-service-dev.yml" />
         <option value="$PROJECT_DIR$/listener-service-dev.yml" />
-        <option value="$PROJECT_DIR$/event-service.yml" />
-        <option value="$PROJECT_DIR$/listener-service.yml" />
-        <option value="$PROJECT_DIR$/product-service.yml" />
         <option value="$PROJECT_DIR$/order-service-dev.yml" />
         <option value="$PROJECT_DIR$/eureka-server.yml" />
-        <option value="$PROJECT_DIR$/application.yml" />
         <option value="$PROJECT_DIR$/api-gateway.yml" />
-        <option value="$PROJECT_DIR$/order-service.yml" />
-        <option value="$PROJECT_DIR$/eureka-cluster.yml" />
+        <option value="$PROJECT_DIR$/admin-service-dev.yml" />
         <option value="$PROJECT_DIR$/admin-service.yml" />
+        <option value="$PROJECT_DIR$/application.yml" />
+        <option value="$PROJECT_DIR$/order-service.yml" />
+        <option value="$PROJECT_DIR$/product-service.yml" />
+        <option value="$PROJECT_DIR$/monitor-hystrix.yml" />
+        <option value="$PROJECT_DIR$/listener-service.yml" />
+        <option value="$PROJECT_DIR$/event-service.yml" />
+        <option value="$PROJECT_DIR$/eureka-cluster.yml" />
       </list>
     </option>
   </component>
@@ -105,6 +118,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -117,21 +131,20 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../springboot-microservice" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\강의 준비\spring-cloud-config-repo" />
       <recent name="D:\jsw\rnd\spring-cloud-config-repo" />
+      <recent name="D:\강의 준비\spring-cloud-config-repo" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -157,16 +170,18 @@
       <option name="presentableId" value="Default" />
       <updated>1566308262660</updated>
       <workItem from="1566347772945" duration="12919000" />
+      <workItem from="1566442301116" duration="3083000" />
+      <workItem from="1566450138281" duration="1176000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15845000" />
+    <option name="totallyTimeSpent" value="20104000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26066098" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -183,7 +198,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -204,24 +219,58 @@
     <entry file="file://$PROJECT_DIR$/client-service-zone2.yml" />
     <entry file="file://$PROJECT_DIR$/client-service-zone1.yml" />
     <entry file="file://$PROJECT_DIR$/discovery-service-zone1.yml" />
+    <entry file="file://$PROJECT_DIR$/order-service-dev.yml" />
+    <entry file="file://$PROJECT_DIR$/product-service-dev.yml" />
+    <entry file="file://$PROJECT_DIR$/admin-service-dev.yml" />
+    <entry file="file://$PROJECT_DIR$/monitor-admin.yml" />
+    <entry file="file://$PROJECT_DIR$/product-service.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="66" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order-service.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" column="7" lean-forward="true" selection-start-line="32" selection-start-column="7" selection-end-line="32" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/monitor-hystrix.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/listener-service-dev.yml" />
+    <entry file="file://$PROJECT_DIR$/listener-service.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="66" selection-start-line="5" selection-start-column="66" selection-end-line="5" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/event-service-dev.yml" />
     <entry file="file://$PROJECT_DIR$/event-service.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
+        <state relative-caret-position="114">
+          <caret line="6" column="66" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/listener-service-dev.yml">
+    <entry file="file://$PROJECT_DIR$/api-gateway.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        <state relative-caret-position="302">
+          <caret line="133" column="26" lean-forward="true" selection-start-line="133" selection-start-column="26" selection-end-line="133" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/event-service-dev.yml">
+    <entry file="file://$PROJECT_DIR$/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="29" selection-start-line="18" selection-start-column="29" selection-end-line="18" selection-end-column="29" />
+        <state relative-caret-position="2698">
+          <caret line="142" column="33" selection-start-line="142" selection-start-column="33" selection-end-line="142" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -234,73 +283,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin-service-prod.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/listener-service.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-876">
-          <caret line="27" column="37" selection-start-line="27" selection-start-column="37" selection-end-line="27" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/order-service-dev.yml" />
-    <entry file="file://$PROJECT_DIR$/monitor-hystrix.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="18" column="8" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/monitor-admin.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/product-service-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/product-service.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="82" lean-forward="true" selection-start-line="82" selection-end-line="82" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api-gateway.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="34" column="40" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-cluster.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="36" column="37" lean-forward="true" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/admin-service-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/order-service.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="45" column="138" lean-forward="true" selection-start-line="45" selection-start-column="19" selection-end-line="45" selection-end-column="138" />
+        <state relative-caret-position="304">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/admin-service.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="124" column="19" lean-forward="true" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
+        <state relative-caret-position="302">
+          <caret line="110" column="74" lean-forward="true" selection-start-line="110" selection-start-column="74" selection-end-line="110" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/eureka-cluster.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="29" column="7" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
         </state>
       </provider>
     </entry>
