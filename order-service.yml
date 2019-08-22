@@ -1,54 +1,11 @@
-spring:
-  main:
-    allow-bean-definition-overriding: true
-  mail:
-    host: smtp.gmail.com
-    password: leaven011806230508!!
-    port: 465
-    properties:
-      mail:
-        smtps:
-          auth: true
-          starttls:
-            enable: true
-          timeout: 8000
-        transport:
-          protocol: smtps
-    protocol: smtps
-    username: onjsdnjs@gmail.com
-  cloud:
-    config:
-      allowOverride: true
-      failFast: true
-      overrideNone: false
-      overrideSystemProperties: false
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS
-feign:
-  hystrix:
-    enabled: true
-
----
 server:
   port: 8001
 spring:
   profiles: first
 eureka:
   client:
-    registry-fetch-interval-seconds: 3
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/,http://127.0.0.1:8764/eureka/
-    prefer-same-zone-eureka: true
-  instance:
-    lease-expiration-duration-in-seconds: 8
-    lease-renewal-interval-in-seconds: 2
-    prefer-ip-address: true
 
 ---
 server:
@@ -57,14 +14,8 @@ spring:
   profiles: second
 eureka:
   client:
-    registry-fetch-interval-seconds: 3
     service-url:
       defaultZone: http://127.0.0.1:8762/eureka/,http://127.0.0.1:8761/eureka/,http://127.0.0.1:8763/eureka/,http://127.0.0.1:8764/eureka/
-    prefer-same-zone-eureka: true
-  instance:
-    lease-expiration-duration-in-seconds: 8
-    lease-renewal-interval-in-seconds: 2
-    prefer-ip-address: true
 
 ---
 server:
@@ -73,13 +24,8 @@ spring:
   profiles: third
 eureka:
   client:
-    registry-fetch-interval-seconds: 3
     service-url:
       defaultZone: http://127.0.0.1:8763/eureka/,http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8764/eureka/
-  instance:
-    lease-expiration-duration-in-seconds: 8
-    lease-renewal-interval-in-seconds: 2
-    prefer-ip-address: true
 
 ---
 server:
@@ -88,11 +34,5 @@ spring:
   profiles: fourth
 eureka:
   client:
-    registry-fetch-interval-seconds: 3
     service-url:
       defaultZone: http://127.0.0.1:8764/eureka/,http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/
-    prefer-same-zone-eureka: true
-  instance:
-    lease-expiration-duration-in-seconds: 8
-    lease-renewal-interval-in-seconds: 2
-    prefer-ip-address: true

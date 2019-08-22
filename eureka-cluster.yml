@@ -1,27 +1,11 @@
-spring:
-  cloud:
-    config:
-      allowOverride: true
-      failFast: true
-      overrideNone: false
-      overrideSystemProperties: false
-  boot:
-    admin:
-      context-path: /admin
-#logging:
-#  level:
-#    com:
-#      netflix:
-#        eureka: OFF
-#        discovery: OFF
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS
+eureka:
+  server:
+    eviction-interval-timer-in-ms: 3000 # remove immediately service list
+    response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
+    enableSelfPreservation: false # Just for demo
+  client:
+    register-with-eureka: true
+    fetch-registry: true
 
 ---
 server:
@@ -29,18 +13,12 @@ server:
 spring:
   profiles: first
 eureka:
-  server:
-    eviction-interval-timer-in-ms: 3000 # remove immediately service list
-    response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
-    enableSelfPreservation: false           # Just for demo
   instance:
     hostname: eureka-server-first.com
     appname: eureka-cluster
     metadataMap:
       zone: first-zone
   client:
-    register-with-eureka: true
-    fetch-registry: true
     service-url:
       defaultZone: http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/,http://127.0.0.1:8764/eureka/
 
@@ -50,18 +28,12 @@ server:
 spring:
   profiles: second
 eureka:
-  server:
-    eviction-interval-timer-in-ms: 3000 # remove immediately service list
-    response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
-    enableSelfPreservation: false           # Just for demo
   instance:
     hostname: eureka-server-second.com
     appname: eureka-cluster
     metadataMap:
       zone: second-zone
   client:
-    register-with-eureka: true
-    fetch-registry: true
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8763/eureka/,http://127.0.0.1:8764/eureka/
 
@@ -71,18 +43,12 @@ server:
 spring:
   profiles: third
 eureka:
-  server:
-    eviction-interval-timer-in-ms: 3000 # remove immediately service list
-    response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
-    enableSelfPreservation: false           # Just for demo
   instance:
     hostname: eureka-server-third.com
     appname: eureka-cluster
     metadataMap:
       zone: third-zone
   client:
-    register-with-eureka: true
-    fetch-registry: true
     service-url:
       defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8764/eureka/
 
@@ -92,17 +58,11 @@ server:
 spring:
   profiles: fourth
 eureka:
-  server:
-    eviction-interval-timer-in-ms: 3000 # remove immediately service list
-    response-cache-update-interval-ms: 1000 # Eureka Server's Response Cache. Default 30,000ms
-    enableSelfPreservation: false           # Just for demo
   instance:
     hostname: eureka-server-fourth.com
     appname: eureka-cluster
     metadataMap:
       zone: fourth-zone
   client:
-    register-with-eureka: true
-    fetch-registry: true
     service-url:
       defaultZone: http://127.0.0.1:8763/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8761/eureka/

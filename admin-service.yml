@@ -1,4 +1,5 @@
-
+server:
+  port: 8081
 ################### OAuth 2.0 Configuration ##########################
 app-security:
   admin-password: admin
@@ -12,120 +13,11 @@ custom:
   oauth2:
     kakao:
       client-id: f7747834a929dd0adccbdeb58a108251
-
-################### the keys to enable captcha ###################
-google:
-  recaptcha:
-    key:
-      secret: 6LfaHiITAAAAANpDTA_Zflwib95IhDqg2SNRLt4U
-      site: 6LfaHiITAAAAAAgZBHl4ZUZAYk5RlOYTr6m2N34X
-
-jasypt:
-  encryptor:
-    bean: jasyptStringEncryptor
-
-################### Logging Configuration ##########################
-logging:
-  level:
-    net:
-      chndol:
-        study:
-          mybatissample:
-            mapper: TRACE
-    org:
-      hibernate:
-        SQL: DEBUG
-        type:
-          descriptor:
-            sql:
-              BasicBinder: TRACE
-
-################### Mybatis Configuration ##########################
-#mybatis.type-aliases-package=io.sbmcs.domain.dto.security,io.sbmcs.domain.dto.event,io.sbmcs.domain.dto.board
-mybatis:
-  configuration:
-    map-underscore-to-camel-case: true
-  mapper-locations: mybatis/mapper/**/*Mapper.xml
-  type-aliases-package: io.sbmcs.domain.dto
-
-################### Scheduler Configuration ###################
-purge:
-  cron:
-    expression: 0 0 5 * * ?
-
-server:
-  tomcat:
-    max-swallow-size: -1
-
-################### JPA Configuration ##########################
 spring:
-  cloud:
-    config:
-      allowOverride: true
-      failFast: true
-      overrideNone: false
-      overrideSystemProperties: false
-  data:
-    jpa:
-      repositories:
-        bootstrap-mode: deferred
-    web:
-      pageable:
-        default-page-size: 10
-        max-page-size: 100
-        one-indexed-parameters: true
-        page-parameter: pageNo
-        prefix: ''
-        qualifier-delimiter: _
-        size-parameter: pageSize
-      sort:
-        sort-parameter: sort
-  jpa:
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-    hibernate:
-      ddl-auto: create
-    properties:
-      hibernate:
-        default_batch_fetch_size: ${chunkSize:1000}
-        hbm2ddl:
-          import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
-        temp:
-          use_jdbc_metadata_defaults: false
-        format_sql: true
-        jdbc:
-          lob:
-            non_contextual_creation: true
-
-################### Batch Configuration ###################
-  batch:
-    job:
-      names: ${job.name:NONE}
-      enabled: false
-
-  ################### ETC Configuration ##########################
-  jackson:
-    deserialization:
-      fail-on-unknown-properties: true
-  main:
-    allow-bean-definition-overriding: true
-  ################### JavaMail Configuration ##########################
-  mail:
-    host: smtp.gmail.com
-    password: leaven011806230508!!
-    port: 465
-    properties:
-      mail:
-        smtps:
-          auth: true
-          starttls:
-            enable: true
-          timeout: 8000
-        transport:
-          protocol: smtps
-    protocol: smtps
-    username: onjsdnjs@gmail.com
   profiles:
-      active: dev,asyncMail,affirmative,aop-async-event,method # pointcut,OAuth
+    active: dev,asyncMail,affirmative,aop-async-event,method # pointcut,OAuth
+
+################### Security OAuth2 ##########################
   security:
     oauth2:
       client:
@@ -137,56 +29,7 @@ spring:
             client-id: 1099004382515-9ffrh6km19qvtigc0ev2eri272t9b4o6.apps.googleusercontent.com
             client-secret: lRP8m46HDmDsE5tdh993gGZO
 
-################### File ##########################
-  servlet:
-    multipart:
-      file-size-threshold: 10MB
-      location: ${java.io.tmpdir}
-      max-file-size: 10MB
-      max-request-size: 100MB
-      resolve-lazily: true
-
-################ Scheduler ##########################
-org:
-  quartz:
-    scheduler:
-      instanceName: ApplicationScheduleroverriding
-      instanceId: AUTO
-    threadPool:
-      class: org.quartz.simpl.SimpleThreadPool
-      threadCount: 5
-      threadPriority: 5
-    plugin:
-      shutdownhook:
-        class: org.quartz.plugins.management.ShutdownHookPlugin
-        cleanShutdown: TRUE
-    jobStore:
-      class: org.quartz.impl.jdbcjobstore.JobStoreTX
-      driverDelegateClass: org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
-      tablePrefix: qrtz_
-      isClustered: true
-      clusterCheckinInterval: 15000
-      maxMisfiresToHandleAtATime: 1
-      misfireThreshold: 12000
-      dataSource: myDataSource
-    dataSource:
-      myDataSource:
-        driver: org.postgresql.Driver
-        URL: jdbc:postgresql://localhost:5432/springboot
-        user: ENC(MdBblvaXjq7YL23XmHLJgw==)
-        password: ENC(r118F0y9cT9+atnsT9SWnV79eL3vxnAS)
-
-file:
-  domain: localhost
-  summernote-images: file:///D:/study/projects/bootsecurityjpa/src/main/webapp/summernote/images/
-  summernote-imagesDir: D:/study/projects/bootsecurityjpa/src/main/webapp/summernote/images
-  uploadFilePath: D:/uploadFile/
-
-support:
-  email: onjsdnjs@naver.com
-
 ################### Spring Security ##########################
-
 application:
   security:
     form:
@@ -229,6 +72,42 @@ application:
     session:
       maximum-sessions: 1
 
+################### Batch Configuration ###################
+  batch:
+    job:
+      names: ${job.name:NONE}
+      enabled: false
+
+################ Scheduler ##########################
+org:
+  quartz:
+    scheduler:
+      instanceName: ApplicationScheduleroverriding
+      instanceId: AUTO
+    threadPool:
+      class: org.quartz.simpl.SimpleThreadPool
+      threadCount: 5
+      threadPriority: 5
+    plugin:
+      shutdownhook:
+        class: org.quartz.plugins.management.ShutdownHookPlugin
+        cleanShutdown: TRUE
+    jobStore:
+      class: org.quartz.impl.jdbcjobstore.JobStoreTX
+      driverDelegateClass: org.quartz.impl.jdbcjobstore.PostgreSQLDelegate
+      tablePrefix: qrtz_
+      isClustered: true
+      clusterCheckinInterval: 15000
+      maxMisfiresToHandleAtATime: 1
+      misfireThreshold: 12000
+      dataSource: myDataSource
+    dataSource:
+      myDataSource:
+        driver: org.postgresql.Driver
+        URL: jdbc:postgresql://localhost:5432/springboot
+        user: ENC(MdBblvaXjq7YL23XmHLJgw==)
+        password: ENC(r118F0y9cT9+atnsT9SWnV79eL3vxnAS)
+
 ################### Spring Cloud - MicroService ##########################
 
 #hystrix:
@@ -251,24 +130,6 @@ application:
 #        errorThresholdPercentage: 50 # Error percentage to open circuit. default 50
 
 eureka:
-  instance:
-    lease-renewal-interval-in-seconds: 1 # remove immediately service list
-    lease-expiration-duration-in-seconds: 2 # remove immediately service list
-    prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka/,http://127.0.0.1:8762/eureka/,http://127.0.0.1:8763/eureka/,http://127.0.0.1:8764/eureka/  # default address
-    registry-fetch-interval-seconds: 3
-
-feign:
-  hystrix:
-    enabled: true
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-  endpoint:
-    health:
-      show-details: ALWAYS
+      defaultZone: http://127.0.0.1:8761/eureka,http://127.0.0.1:8762/eureka,http://127.0.0.1:8763/eureka,http://127.0.0.1:8764/eureka
