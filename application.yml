@@ -11,9 +11,6 @@ jasypt:
 spring:
   main:
     allow-bean-definition-overriding: true
-  devtools:
-    livereload:
-      enabled: true
   rabbitmq:
     host: 127.0.0.1
     listener:
