@@ -21,6 +21,23 @@ spring:
     url: jdbc:postgresql://localhost:5432/springboot
     username: ENC(r118F0y9cT9+atnsT9SWnV79eL3vxnAS)
 
+################### JavaMail Configuration ##########################
+  mail:
+    host: smtp.gmail.com
+    password: leaven011806230508!!
+    port: 465
+    properties:
+      mail:
+        smtps:
+          auth: true
+          starttls:
+            enable: true
+          timeout: 8000
+        transport:
+          protocol: smtps
+    protocol: smtps
+    username: onjsdnjs@gmail.com
+
 ################### Security OAuth2 ##########################
   security:
     oauth2:
