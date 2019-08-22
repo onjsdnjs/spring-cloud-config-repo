@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ef9c97d-3531-47e7-a3c6-dca7de8b6412" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/zipkin-server.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/admin-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/event-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/event-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listener-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/listener-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/order-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/order-service.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/product-service.yml" beforeDir="false" afterPath="$PROJECT_DIR$/product-service.yml" afterDir="false" />
-    </list>
+    <list default="true" id="7ef9c97d-3531-47e7-a3c6-dca7de8b6412" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/zipkin-server.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="132">
@@ -95,7 +86,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="616">
@@ -324,13 +315,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zipkin-server.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/product-service.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -370,6 +354,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
           <caret line="28" column="19" lean-forward="true" selection-start-line="28" selection-start-column="19" selection-end-line="28" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zipkin-server.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
         </state>
       </provider>
     </entry>
