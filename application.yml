@@ -1,178 +1,178 @@
-##****************************************************************************************#
-##------------------------ Application Global Configuration ------------------------------#
-##                                                                                        #
-##****************************************************************************************#
-#server:
-#  tomcat:
-#    max-swallow-size: -1
-#
-#################### Encryption Configuration #######################
-#jasypt:
-#  encryptor:
-#    bean: jasyptStringEncryptor
-#
-############## Spring Boot Configuration ############################
-#spring:
-#  sleuth:
-#    enabled: true
-#    sampler:
-#      probability: 1.0
-#  main:
-#    allow-bean-definition-overriding: true
-#  rabbitmq:
-#    host: 127.0.0.1
-#    listener:
-#      prefetch: 10
-#      retry:
-#        enabled: true
-#        max-attempts: 3
-#    password: guest
-#    port: 5672
-#    username: guest
-#    virtual-host: /springboot
-#  thymeleaf:
-#    cache: false
-#  redis:
-#    host: 127.0.0.1
-#    port: 6379
-#    password:
-#    jedis:
-#      pool:
-#        min-idle: 8
-#        max-idle: 500
-#        max-active: 2000
-#        max-wait: 10000
-#    timeout: 0
-#  cache:
-#    type: redis
-#
-#  ################### JPA Configuration ##########################
-#  data:
-#    jpa:
-#      repositories:
-#        bootstrap-mode: deferred
-#    web:
-#      pageable:
-#        default-page-size: 10
-#        max-page-size: 100
-#        one-indexed-parameters: true
-#        page-parameter: pageNo
-#        prefix: ''
-#        qualifier-delimiter: _
-#        size-parameter: pageSize
-#      sort:
-#        sort-parameter: sort
-#  jpa:
-#    database-platform: org.hibernate.dialect.PostgreSQLDialect
-#    hibernate:
-#      ddl-auto: update
+#****************************************************************************************#
+#------------------------ Application Global Configuration ------------------------------#
+#                                                                                        #
+#****************************************************************************************#
+server:
+  tomcat:
+    max-swallow-size: -1
+
+################### Encryption Configuration #######################
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+
+############# Spring Boot Configuration ############################
+spring:
+  sleuth:
+    enabled: true
+    sampler:
+      probability: 1.0
+  main:
+    allow-bean-definition-overriding: true
+  rabbitmq:
+    host: 127.0.0.1
+    listener:
+      prefetch: 10
+      retry:
+        enabled: true
+        max-attempts: 3
+    password: guest
+    port: 5672
+    username: guest
+    virtual-host: /springboot
+  thymeleaf:
+    cache: false
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        min-idle: 8
+        max-idle: 500
+        max-active: 2000
+        max-wait: 10000
+    timeout: 0
+  cache:
+    type: redis
+
+  ################### JPA Configuration ##########################
+  data:
+    jpa:
+      repositories:
+        bootstrap-mode: deferred
+    web:
+      pageable:
+        default-page-size: 10
+        max-page-size: 100
+        one-indexed-parameters: true
+        page-parameter: pageNo
+        prefix: ''
+        qualifier-delimiter: _
+        size-parameter: pageSize
+      sort:
+        sort-parameter: sort
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_batch_fetch_size: ${chunkSize:1000}
+        hbm2ddl:
+          import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
+        temp:
+          use_jdbc_metadata_defaults: false
+        format_sql: true
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+  ################### ETC Configuration ##########################
+  servlet:
+    multipart:
+      file-size-threshold: 10MB
+      location: ${java.io.tmpdir}
+      max-file-size: 10MB
+      max-request-size: 100MB
+      resolve-lazily: true
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+
+  cloud:
+    config:
+      allowOverride: true
+      failFast: true
+      overrideNone: false
+      overrideSystemProperties: false
+
+################### JavaMail Configuration ##########################
+#  mail:
+#    host: smtp.gmail.com
+#    password: leaven011806230508!!
+#    port: 465
 #    properties:
-#      hibernate:
-#        default_batch_fetch_size: ${chunkSize:1000}
-#        hbm2ddl:
-#          import_files_sql_extractor: org.hibernate.tool.hbm2ddl.MultipleLinesSqlCommandExtractor
-#        temp:
-#          use_jdbc_metadata_defaults: false
-#        format_sql: true
-#        jdbc:
-#          lob:
-#            non_contextual_creation: true
-#
-#  ################### ETC Configuration ##########################
-#  servlet:
-#    multipart:
-#      file-size-threshold: 10MB
-#      location: ${java.io.tmpdir}
-#      max-file-size: 10MB
-#      max-request-size: 100MB
-#      resolve-lazily: true
-#  jackson:
-#    deserialization:
-#      fail-on-unknown-properties: true
-#
-#  cloud:
-#    config:
-#      allowOverride: true
-#      failFast: true
-#      overrideNone: false
-#      overrideSystemProperties: false
-#
-#################### JavaMail Configuration ##########################
-##  mail:
-##    host: smtp.gmail.com
-##    password: leaven011806230508!!
-##    port: 465
-##    properties:
-##      mail:
-##        smtps:
-##          auth: true
-##          starttls:
-##            enable: true
-##          timeout: 8000
-##        transport:
-##          protocol: smtps
-##    protocol: smtps
-##    username: onjsdnjs@gmail.com
-#
-#################### Mybatis Configuration ##########################
-##mybatis.type-aliases-package=io.sbmcs.domain.dto.security,io.sbmcs.domain.dto.event,io.sbmcs.domain.dto.board
-#mybatis:
-#  configuration:
-#    map-underscore-to-camel-case: true
-#  mapper-locations: mybatis/mapper/**/*Mapper.xml
-#  type-aliases-package: io.sbmcs.domain.dto
-#
-#
-#file:
-#  domain: localhost
-#  summernote-images: file:///D:/study/projects/bootsecurityjpa/src/main/webapp/summernote/images/
-#  summernote-imagesDir: D:/study/projects/bootsecurityjpa/src/main/webapp/summernote/images
-#  uploadFilePath: D:/uploadFile/
-#
-#support:
-#  email: onjsdnjs@naver.com
-#
-#management:
-#  endpoints:
-#    web:
-#      exposure:
-#        include: "*"
-#  endpoint:
-#    health:
-#      show-details: ALWAYS
-#
-############## Spring Cloud Configuration ############################
-#eureka:
-#  instance:
-#    lease-renewal-interval-in-seconds: 1 # remove immediately service list
-#    lease-expiration-duration-in-seconds: 2 # remove immediately service list
-#    prefer-ip-address: true
-#  client:
-#    registry-fetch-interval-seconds: 3
-#    prefer-same-zone-eureka: true
-#feign:
-#  hystrix:
-#    enabled: true
-#
-#################### Logging Configuration ##########################
-#logging:
-#  level:
-#    org:
-#      hibernate:
-#        SQL: DEBUG
-#        type:
-#          descriptor:
-#            sql:
-#              BasicBinder: TRACE
-#
-#################### the keys to enable captcha ###################
-#google:
-#  recaptcha:
-#    key:
-#      secret: 6LfaHiITAAAAANpDTA_Zflwib95IhDqg2SNRLt4U
-#      site: 6LfaHiITAAAAAAgZBHl4ZUZAYk5RlOYTr6m2N34X
-#
-#################### zipkin server ###################
-#sample:
-#  zipkin:
-#    enabled: true
+#      mail:
+#        smtps:
+#          auth: true
+#          starttls:
+#            enable: true
+#          timeout: 8000
+#        transport:
+#          protocol: smtps
+#    protocol: smtps
+#    username: onjsdnjs@gmail.com
+
+################### Mybatis Configuration ##########################
+#mybatis.type-aliases-package=io.sbmcs.domain.dto.security,io.sbmcs.domain.dto.event,io.sbmcs.domain.dto.board
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: mybatis/mapper/**/*Mapper.xml
+  type-aliases-package: io.sbmcs.domain.dto
+
+
+file:
+  domain: localhost
+  summernote-images: file:///D:/study/projects/bootsecurityjpa/src/main/webapp/summernote/images/
+  summernote-imagesDir: D:/study/projects/bootsecurityjpa/src/main/webapp/summernote/images
+  uploadFilePath: D:/uploadFile/
+
+support:
+  email: onjsdnjs@naver.com
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
+############# Spring Cloud Configuration ############################
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 1 # remove immediately service list
+    lease-expiration-duration-in-seconds: 2 # remove immediately service list
+    prefer-ip-address: true
+  client:
+    registry-fetch-interval-seconds: 3
+    prefer-same-zone-eureka: true
+feign:
+  hystrix:
+    enabled: true
+
+################### Logging Configuration ##########################
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
+
+################### the keys to enable captcha ###################
+google:
+  recaptcha:
+    key:
+      secret: 6LfaHiITAAAAANpDTA_Zflwib95IhDqg2SNRLt4U
+      site: 6LfaHiITAAAAAAgZBHl4ZUZAYk5RlOYTr6m2N34X
+
+################### zipkin server ###################
+sample:
+  zipkin:
+    enabled: true
