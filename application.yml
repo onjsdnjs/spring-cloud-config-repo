@@ -88,15 +88,7 @@ spring:
           lob:
             non_contextual_creation: true
 
-################### Mybatis Configuration ##########################
-#mybatis.type-aliases-package=io.sbmcs.domain.dto.security,io.sbmcs.domain.dto.event,io.sbmcs.domain.dto.board
-mybatis:
-  configuration:
-    map-underscore-to-camel-case: true
-  mapper-locations: mybatis/mapper/**/*Mapper.xml
-  type-aliases-package: io.sbmcs.domain.dto
-
-################### ETC Configuration ##########################
+  ################### ETC Configuration ##########################
   servlet:
     multipart:
       file-size-threshold: 10MB
@@ -114,6 +106,16 @@ mybatis:
       failFast: true
       overrideNone: false
       overrideSystemProperties: false
+
+################### Mybatis Configuration ##########################
+#mybatis.type-aliases-package=io.sbmcs.domain.dto.security,io.sbmcs.domain.dto.event,io.sbmcs.domain.dto.board
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: mybatis/mapper/**/*Mapper.xml
+  type-aliases-package: io.sbmcs.domain.dto
+
+
 file:
   domain: localhost
   summernote-images: file:///D:/study/projects/bootsecurityjpa/src/main/webapp/summernote/images/
