@@ -200,8 +200,8 @@ application:
       login-processing-url: /api/auth/login
     index-url: /index
     denied-url: /denied
-    ignored-matcher-pattern: /static/**,/css/**,/swagger-resources/**,/v2/api-docs,/js/**,/swagger-resources/configuration/ui,/swagger-resources/configuration/security,/images/**,/webjars/**,/**/favicon.ico
-    permit-all-pattern: /,/index,/home,/login,/errorpage/**,/swagger-resources/**,/v2/api-docs,/swagger-resources/configuration/ui,/swagger-resources/configuration/security
+    ignored-matcher-pattern: /static/**,/css/**,/swagger-resources/**,/v2/api-docs,/js/**,/images/**,/webjars/**,/**/favicon.ico
+    permit-all-pattern: /,/index,/home,/login,/errorpage/**
     remember-me-timeout: 3600
     remember-me-key: anymobi
 
