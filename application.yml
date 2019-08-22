@@ -1,6 +1,12 @@
 server:
   tomcat:
     max-swallow-size: -1
+
+################### Encryption Configuration ##########################
+jasypt:
+  encryptor:
+    bean: jasyptStringEncryptor
+
 ############# Spring Boot Configuration ############################
 spring:
   main:
@@ -146,10 +152,7 @@ logging:
             sql:
               BasicBinder: TRACE
 
-################### Encryption Configuration ##########################
-jasypt:
-  encryptor:
-    bean: jasyptStringEncryptor
+
 
 ################### the keys to enable captcha ###################
 google:
