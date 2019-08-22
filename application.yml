@@ -42,7 +42,7 @@ spring:
   cache:
     type: redis
 
-################### JPA Configuration ##########################
+  ################### JPA Configuration ##########################
   data:
     jpa:
       repositories:
@@ -74,7 +74,7 @@ spring:
           lob:
             non_contextual_creation: true
 
-################### ETC Configuration ##########################
+  ################### ETC Configuration ##########################
   servlet:
     multipart:
       file-size-threshold: 10MB
@@ -153,11 +153,6 @@ feign:
 ################### Logging Configuration ##########################
 logging:
   level:
-    net:
-      chndol:
-        study:
-          mybatissample:
-            mapper: TRACE
     org:
       hibernate:
         SQL: DEBUG
@@ -165,8 +160,6 @@ logging:
           descriptor:
             sql:
               BasicBinder: TRACE
-
-
 
 ################### the keys to enable captcha ###################
 google:
