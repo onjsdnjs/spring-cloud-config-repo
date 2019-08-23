@@ -4,6 +4,7 @@ server:
 spring:
   zipkin:
     baseUrl: http://zipkin-server/
+    enabled : true
   datasource:
     password: ENC(MdBblvaXjq7YL23XmHLJgw==)
     url: jdbc:postgresql://localhost:5432/springboot

@@ -3,6 +3,7 @@ server:
 spring:
   zipkin:
     baseUrl: http://zipkin-server/
+    enabled : true
   profiles: first
   datasource:
     password: ENC(MdBblvaXjq7YL23XmHLJgw==)

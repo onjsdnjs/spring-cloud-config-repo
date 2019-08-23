@@ -16,6 +16,7 @@ custom:
 spring:
   zipkin:
     baseUrl: http://zipkin-server/
+    enabled : true
   devtools:
     livereload:
       enabled: true
