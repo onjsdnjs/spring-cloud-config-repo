@@ -2,7 +2,7 @@ server:
   port: 8001
 spring:
   zipkin:
-    baseUrl: http://zipkin-server/
+    baseUrl: http://localhost:9411
     enabled : true
   profiles: first
   datasource:

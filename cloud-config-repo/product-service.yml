@@ -3,7 +3,7 @@ server:
 
 spring:
   zipkin:
-    baseUrl: http://zipkin-server/
+    baseUrl: http://localhost:9411
     enabled : true
   datasource:
     password: ENC(MdBblvaXjq7YL23XmHLJgw==)

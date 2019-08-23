@@ -15,7 +15,7 @@ custom:
       client-id: f7747834a929dd0adccbdeb58a108251
 spring:
   zipkin:
-    baseUrl: http://zipkin-server/
+    baseUrl: http://localhost:9411
     enabled : true
   devtools:
     livereload:
