@@ -23,7 +23,7 @@ zuul:
   thread-pool:
     use-separate-thread-pools: true
     thread-pool-key-prefix: zuul-
-  strip-prefix: false
+#  strip-prefix: false
 
 eureka:
   instance:
