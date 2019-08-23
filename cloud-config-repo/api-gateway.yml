@@ -7,23 +7,27 @@ zuul:
     admin-service:
       path: /adm/**
       serviceId: admin-service
+      strip-prefix: false
     order-service:
       path: /orders/**
       serviceId: order-service
+      strip-prefix: false
     product-service:
       path: /products/**
       serviceId: product-service
+      strip-prefix: false
     event-service:
       path: /events/**
       serviceId: event-service
+      strip-prefix: false
     listener-service:
       path: /listeners/**
       serviceId: listener-service
+      strip-prefix: false
   ribbon-isolation-strategy: thread
   thread-pool:
     use-separate-thread-pools: true
     thread-pool-key-prefix: zuul-
-  strip-prefix: true
 
 eureka:
   instance:
