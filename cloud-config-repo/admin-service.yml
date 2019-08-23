@@ -20,8 +20,8 @@ spring:
   devtools:
     livereload:
       enabled: true
-  profiles:
-    active: dev,asyncMail,affirmative,aop-async-event,method # pointcut,OAuth
+#  profiles:
+#    active: dev,asyncMail,affirmative,aop-async-event,method # pointcut,OAuth
   datasource:
     password: ENC(MdBblvaXjq7YL23XmHLJgw==)
     url: jdbc:postgresql://localhost:5432/springboot
