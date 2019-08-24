@@ -17,7 +17,7 @@ eureka:
 
 turbine:
   aggregator:
-#    cluster-config: ORDER
+    cluster-config: ORDER-SERVICE
   appConfig: admin-service,order-service,product-service
   clusterNameExpression: "'default'"
 # http://localhost:9091/turbine.stream
