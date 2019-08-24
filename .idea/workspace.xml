@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ef9c97d-3531-47e7-a3c6-dca7de8b6412" name="Default Changelist" comment="" />
+    <list default="true" id="7ef9c97d-3531-47e7-a3c6-dca7de8b6412" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cloud-config-repo/monitor-hystrix.yml" beforeDir="false" afterPath="$PROJECT_DIR$/cloud-config-repo/monitor-hystrix.yml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +20,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cloud-config-repo/monitor-hystrix.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+            <state relative-caret-position="484">
+              <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -279,8 +282,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cloud-config-repo/monitor-hystrix.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="33" lean-forward="true" selection-start-line="17" selection-start-column="33" selection-end-line="17" selection-end-column="33" />
+        <state relative-caret-position="484">
+          <caret line="22" column="38" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="38" />
         </state>
       </provider>
     </entry>
