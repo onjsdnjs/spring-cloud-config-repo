@@ -5,6 +5,10 @@ spring:
   zipkin:
     baseUrl: http://localhost:9411
     enabled : true
+  cloud:
+    config:
+      discovery:
+        enabled: false
 
 eureka:
   instance:
@@ -19,5 +23,5 @@ turbine:
   aggregator:
     cluster-config: ORDER-SERVICE
   appConfig: admin-service,order-service,product-service
-  clusterNameExpression: new String("default")
+#  clusterNameExpression: "'default'"
 # http://localhost:9999/turbine.stream
