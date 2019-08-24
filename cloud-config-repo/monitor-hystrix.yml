@@ -1,5 +1,5 @@
 server:
-  port: 9090
+  port: 9999
 
 spring:
   zipkin:
@@ -17,7 +17,7 @@ eureka:
 
 turbine:
   aggregator:
-#    cluster-config: ORDER-SERVICE
+    cluster-config: ORDER-SERVICE
   appConfig: admin-service,order-service,product-service
   clusterNameExpression: "'default'"
 # http://localhost:9091/turbine.stream
