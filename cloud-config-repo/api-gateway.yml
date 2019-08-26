@@ -5,7 +5,7 @@ zuul:
 #  prefix: /api
   routes:
     admin-service:
-      path: /adm/**
+      path: /admin/**
       serviceId: admin-service
       strip-prefix: false
     order-service:
