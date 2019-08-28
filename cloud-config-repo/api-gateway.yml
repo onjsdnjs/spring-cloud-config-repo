@@ -5,22 +5,27 @@ zuul:
 #  prefix: /api
   routes:
     admin-service:
+      sensitive-headers: Set-Cookie,Authorization
       path: /admin/**
       serviceId: admin-service
       strip-prefix: false
     order-service:
+      sensitive-headers: Set-Cookie,Authorization
       path: /orders/**
       serviceId: order-service
       strip-prefix: false
     product-service:
+      sensitive-headers: Set-Cookie,Authorization
       path: /products/**
       serviceId: product-service
       strip-prefix: false
     event-service:
+      sensitive-headers: Set-Cookie,Authorization
       path: /events/**
       serviceId: event-service
       strip-prefix: false
     listener-service:
+      sensitive-headers: Set-Cookie,Authorization
       path: /listeners/**
       serviceId: listener-service
       strip-prefix: false
