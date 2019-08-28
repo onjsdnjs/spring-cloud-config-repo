@@ -6,7 +6,7 @@ zuul:
   routes:
     admin-service:
       sensitive-headers: Set-Cookie,Authorization
-      path: /admin/**
+      path: /adm/**
       serviceId: admin-service
       strip-prefix: false
     order-service:
