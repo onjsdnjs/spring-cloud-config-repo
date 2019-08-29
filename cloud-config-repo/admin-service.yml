@@ -159,4 +159,4 @@ org:
 eureka:
   client:
     service-url:
-      defaultZone: http://127.0.0.1:8761/eureka,http://127.0.0.1:8762/eureka,http://127.0.0.1:8763/eureka,http://127.0.0.1:8764/eureka
+      defaultZone: http://127.0.0.1:8761/eureka
