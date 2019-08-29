@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7ef9c97d-3531-47e7-a3c6-dca7de8b6412" name="Default Changelist" comment="" />
+    <list default="true" id="7ef9c97d-3531-47e7-a3c6-dca7de8b6412" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cloud-config-repo/admin-service.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="394">
-              <caret line="161" column="47" lean-forward="true" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
+            <state>
+              <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
             </state>
           </provider>
         </entry>
@@ -26,7 +28,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cloud-config-repo/order-service.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
+            <state>
               <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
             </state>
           </provider>
@@ -35,8 +37,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cloud-config-repo/application.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="222">
-              <caret line="147" column="43" lean-forward="true" selection-start-line="147" selection-start-column="43" selection-end-line="147" selection-end-column="43" />
+            <state>
+              <caret line="147" column="43" selection-start-line="147" selection-start-column="43" selection-end-line="147" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -44,8 +46,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cloud-config-repo/product-service.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+            <state>
+              <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -53,8 +55,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cloud-config-repo/api-gateway.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="152">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -112,9 +114,9 @@
         <option value="$PROJECT_DIR$/cloud-config-repo/order-service.yml" />
         <option value="$PROJECT_DIR$/cloud-config-repo/product-service.yml" />
         <option value="$PROJECT_DIR$/cloud-config-repo/monitor-hystrix.yml" />
-        <option value="$PROJECT_DIR$/cloud-config-repo/api-gateway.yml" />
         <option value="$PROJECT_DIR$/cloud-config-repo/admin-service.yml" />
         <option value="$PROJECT_DIR$/cloud-config-repo/application.yml" />
+        <option value="$PROJECT_DIR$/cloud-config-repo/api-gateway.yml" />
       </list>
     </option>
   </component>
@@ -132,6 +134,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -148,7 +151,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -198,18 +200,18 @@
       <workItem from="1566778017453" duration="2837000" />
       <workItem from="1566792571629" duration="6757000" />
       <workItem from="1566976231731" duration="909000" />
-      <workItem from="1566985011107" duration="2912000" />
+      <workItem from="1566985011107" duration="3164000" />
+      <workItem from="1567037098296" duration="65000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46459000" />
+    <option name="totallyTimeSpent" value="46776000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2771855" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2803838" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -285,38 +287,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-config-repo/order-service.yml">
+    <entry file="file://$PROJECT_DIR$/cloud-config-repo/admin-service.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        <state>
+          <caret line="161" column="47" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-config-repo/product-service.yml">
+    <entry file="file://$PROJECT_DIR$/cloud-config-repo/order-service.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
+        <state>
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cloud-config-repo/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="222">
-          <caret line="147" column="43" lean-forward="true" selection-start-line="147" selection-start-column="43" selection-end-line="147" selection-end-column="43" />
+        <state>
+          <caret line="147" column="43" selection-start-line="147" selection-start-column="43" selection-end-line="147" selection-end-column="43" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cloud-config-repo/admin-service.yml">
+    <entry file="file://$PROJECT_DIR$/cloud-config-repo/product-service.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="161" column="47" lean-forward="true" selection-start-line="161" selection-start-column="47" selection-end-line="161" selection-end-column="47" />
+        <state>
+          <caret line="15" column="39" selection-start-line="15" selection-start-column="39" selection-end-line="15" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cloud-config-repo/api-gateway.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="152">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
         </state>
       </provider>
     </entry>
