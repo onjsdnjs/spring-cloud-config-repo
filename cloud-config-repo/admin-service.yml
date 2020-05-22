@@ -30,7 +30,7 @@ spring:
 ################### JavaMail Configuration ##########################
   mail:
     host: smtp.gmail.com
-    password: nl01180623!!
+    password: leaven011806230508!!
     port: 465
     properties:
       mail:
@@ -42,7 +42,7 @@ spring:
         transport:
           protocol: smtps
     protocol: smtps
-    username: leaven73@gmail.com
+    username: onjsdnjs@gmail.com
 
 ################### Security OAuth2 ##########################
   security:
