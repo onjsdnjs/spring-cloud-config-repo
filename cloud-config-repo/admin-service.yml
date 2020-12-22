@@ -30,7 +30,7 @@ spring:
 ################### JavaMail Configuration ##########################
   mail:
     host: smtp.gmail.com
-    password: nl01180623!!
+    password: nl011806231!
     port: 465
     properties:
       mail:
